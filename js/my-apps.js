@@ -2,10 +2,10 @@ var app = new Framework7({
   // App root element
   root: '#app',
   // App Name
-  name: 'Learn',
-  theme: 'ios',
+  name: 'Demo',
+  theme: 'md',
   // App id
-  id: 'com.learn.workshop',
+  id: 'com.demo.workshop',
   // Enable swipe panel
   panel: {
     swipe: false,

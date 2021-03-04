@@ -49,8 +49,8 @@
           >
           <br />
           <a
-            href="#"
-            class="button button-fill button-large bg-color-teal text-color-white nunito-regular"
+            href="utils.html"
+            class="external button button-outline button-large color-white nunito-regular"
             >4. Utilities</a
           >
           <br />
@@ -82,8 +82,8 @@
           >
           <br />
           <a
-            href="tutor.html"
-            class="external button button-outline button-large color-white nunito-regular"
+            href="#"
+            class="button button-fill button-large bg-color-teal text-color-white nunito-regular"
             >2. Tutorial</a
           >
           <br />
@@ -95,55 +95,160 @@
         <div data-name="home" class="page">
           <div class="page-content">
             <div class="block">
-              <h1 class="text-color-black">Utilities</h1>
+              <h1 class="text-color-black">Project</h1>
               <h1
                 style="font-size: 50px; margin-top: -20px"
                 class="text-color-orange"
               >
-                Colors, Positioning, Grid
+                Tutorial
               </h1>
 
               <div class="timeline">
                 <div class="timeline-item">
                   <div class="timeline-item-divider"></div>
                   <div class="timeline-item-content">
-                    <h1>Colors</h1>
+                    <h1>Download Assets</h1>
                     <a
-                      href="https://framework7.io/docs/color-themes.html"
+                      href="download/assetsImage.zip"
                       target="_blank"
                       class="external button button-fill button-large bg-color-orange"
                       style="width: 200px"
-                      >View Documentation</a
+                      >Download</a
                     >
+
+                    <p>Extract & Copy to <b>img</b> folder</p>
                     <br />
                   </div>
                 </div>
                 <div class="timeline-item">
                   <div class="timeline-item-divider"></div>
                   <div class="timeline-item-content">
-                    <h1>Positioning</h1>
-                    <a
-                      href="https://framework7.io/docs/typography.html"
-                      target="_blank"
-                      class="external button button-fill button-large bg-color-orange"
-                      style="width: 200px"
-                      >View Documentation</a
-                    >
-                    <br />
-                  </div>
+                    <h1>Layout & CSS</h1>
+                    <h3>Copy this Layout starter to <b>index.html</b> file</h3>
+                    <xmp>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3" />
+    <!-- Your app title -->
+    <title>CovidApp</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="css/framework7.bundle.min.css" />
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css" />
+    <link rel="stylesheet" href="css/framework7-icons.css" />
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page" style="background-color: #f3f3f3">
+          <div class="popup popup-about">
+            <div class="block">
+              <p>
+                <a class="link popup-close text-color-orange" href="#">Close</a>
+              </p>
+              <h2>Kelompok Huha</h2>
+              <!-- Close Popup -->
+              <p>1. A - 1802902</p>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <!-- Static Navbar -->
+            <div class="navbar no-shadow">
+              <div
+                class="navbar-bg"
+                style="background-color: transparent"
+              ></div>
+              <div class="navbar-inner">
+                <div class="title text-color-white font-bolds">Covid App</div>
+                <div class="right block">
+                  <a
+                    href="#"
+                    class="text-color-white popup-open"
+                    data-popup=".popup-about"
+                  >
+                    <i class="f7-icons">info_circle_fill</i>
+                  </a>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-item-divider"></div>
-                  <div class="timeline-item-content">
-                    <h1>Grid</h1>
-                    <a
-                      href="https://framework7.io/docs/grid.html"
-                      target="_blank"
-                      class="external button button-fill button-large bg-color-orange"
-                      style="width: 200px"
-                      >View Documentation</a
-                    >
+              </div>
+            </div>
+
+            <!-- Banner & Header -->
+            <img src="img/cover.svg" class="banner" alt="" />
+            <!-- Content -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="js/framework7.bundle.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
+
+                    </xmp>
                     <br />
+                    <h3>Copy this CSS styling to <b>my-app.css</b> file</h3>
+
+                    <xmp
+>
+.card-bgr {
+  background-image: url(../img/card.svg);
+  background-size: contain;
+}
+
+/* css mobile view only */
+@media only screen and (max-width: 700px) {
+  .banner {
+    margin-top: -60px;
+    height: 350px;
+  }
+
+  .header {
+    margin-top: -230px !important;
+  }
+}
+/* css desktop view only */
+@media only screen and (min-width: 700px) {
+  .framework7-root,
+  body,
+  html {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 78%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #ededed;
+  }
+
+  .banner {
+    margin-top: -170px;
+    width: 100% !important;
+  }
+
+  .header {
+    margin-top: -180px !important;
+  }
+
+  .iconz {
+    font-size: 35px;
+  }
+}
+                    </xmp>
                   </div>
                 </div>
               </div>
